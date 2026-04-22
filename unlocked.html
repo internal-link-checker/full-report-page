@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full export unlocked</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .success {
+      color: #198754;
+      font-weight: bold;
+      margin: 18px 0;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .small {
+      font-size: 12px;
+      opacity: 0.75;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>You’re unlocked 🎉</h1>
+      <p class="success">Full export has been enabled on this browser.</p>
+      <p>Go back to the Internal Link Checker extension and click the export button again.</p>
+      <a class="button" href="https://internal-link-checker.github.io/full-report-page/">Back to export page</a>
+      <p class="small">If the extension is already open, close it and open it again.</p>
+    </div>
+  </div>
+
+  <script>
+    localStorage.setItem("ilc_pro_unlocked", "true");
+  </script>
+</body>
+</html>
