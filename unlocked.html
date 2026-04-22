@@ -65,15 +65,20 @@
   <div class="container">
     <div class="card">
       <h1>You’re unlocked 🎉</h1>
-      <p class="success">Full export has been enabled on this browser.</p>
-      <p>Go back to the Internal Link Checker extension and click the export button again.</p>
+      <p class="success">Full export is now enabled.</p>
+      <p>Go back to the Internal Link Checker extension and click the export button again to download your report.</p>
       <a class="button" href="https://internal-link-checker.github.io/full-report-page/">Back to export page</a>
       <p class="small">If the extension is already open, close it and open it again.</p>
     </div>
   </div>
 
-  <script>
-    localStorage.setItem("ilc_pro_unlocked", "true");
-  </script>
+<script>
+  if (typeof chrome !== "undefined" && chrome.storage) {
+    chrome.storage.local.set({ ilc_pro_unlocked: true });
+  }
+   setTimeout(() => {
+    window.close();
+  }, 1500);
+</script>
 </body>
 </html>
